@@ -1,0 +1,1 @@
+var homeFinanceApp = angular.module('homeFinanceApp', []);
