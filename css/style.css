@@ -7,3 +7,12 @@
     background-size: 100%;
     margin-bottom: 5px;
 }
+
+.btn btn-primary btn-lg {
+    padding-top: 10px;
+}
+
+.form-group {
+    text-align: left;
+    width:50%;
+}
