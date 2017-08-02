@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="homeFinanceApp">
+    <head>
+        <title>Home Finance System- main</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!--Angular references -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+        <!--Bootstrap references -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+        <!--UI Bootstrap-->
+        <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+        <!--JS references -->
+        <script src="app/app.js"></script>
+        <script src="app/shared/breadcrumbCtrl.js"></script>
+
+    </head>
+    
+    <body ng-app="homeFinanceApp">
+        
+        <div class="navbar">
+            <a class="navbar-brand" href="#">Title</a>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+
+         <div class="header">
+            <h1>Home Finance System</h1>
+        </div>
+
+        <ol class="breadcrumb" ng-controller="BreadcrumbCtrl">
+            <li ng-repeat="breadcrumb in breadcrumbArr">
+                <a href="#">{{breadcrumbArr.uiString}}</a>
+            </li>
+            <!--<li><a href="#">Home</a></li>
+            <li><a href="#">Private</a></li>-->
+        </ol>  
+        
+
+        <ng-view></ng-view>
+        
+    </body>
+</html>

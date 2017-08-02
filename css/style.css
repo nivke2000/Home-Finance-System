@@ -1,3 +1,8 @@
+.header {
+    float: right;
+}
+
+
 #land-page-top-img {
     width: 100%;
     /* TODO: handle height property to be responsive */
