@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="homeFinanceApp">
+    <head>
+        <title>Home Finance System- main</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!--Angular references -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+        <!--Bootstrap references -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <!--UI Bootstrap-->
+        <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+        <!--JS references -->
+        <script src="app/app.js"></script>
+        <script src="app/services/breadcrumbService.js"></script>
+        <script src="app/shared/breadcrumbCtrl.js"></script>
+
+    </head>
+    
+    <body ng-app="homeFinanceApp">
+        
+        <div class="top-row">
+            
+            <nav class="navbar navbar-default col-xs-8 col-sm-8 col-md-8 col-lg-8" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Main page</a></li>
+                        <li><a href="#">Incomes</a></li>
+                        <li><a href="#">Expenses</a></li>
+                        <li><a href="#">Reports</a></li>
+                    </ul>
+
+
+                </div><!-- /.navbar-collapse -->
+            </nav>
+                   
+            <div class="header col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <h1>Home Finance System</h1>
+            </div>
+        </div>
+
+        <ol class="breadcrumb col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="BreadcrumbCtrl">
+            <li ng-repeat="breadcrumb in breadcrumbArr">
+                <a href="{{breadcrumb.url}}">{{breadcrumb.uiString}}</a>
+            </li>
+        </ol> 
+          
+        
+
+        <ng-view></ng-view>
+        
+    </body>
+</html>
