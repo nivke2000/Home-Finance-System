@@ -20,6 +20,7 @@
 
         <!--JS references -->
         <script src="app/app.js"></script>
+        <script src="app/services/breadcrumbService.js"></script>
         <script src="app/shared/breadcrumbCtrl.js"></script>
 
     </head>
@@ -44,11 +45,10 @@
 
         <ol class="breadcrumb" ng-controller="BreadcrumbCtrl">
             <li ng-repeat="breadcrumb in breadcrumbArr">
-                <a href="#">{{breadcrumbArr.uiString}}</a>
+                <a href="#">{{breadcrumb.uiString}}</a>
             </li>
-            <!--<li><a href="#">Home</a></li>
-            <li><a href="#">Private</a></li>-->
-        </ol>  
+        </ol> 
+          
         
 
         <ng-view></ng-view>
