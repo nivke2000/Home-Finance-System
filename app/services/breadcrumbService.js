@@ -3,20 +3,23 @@ homeFinanceApp.factory ("breadcrumbService", function () {
 
     var data = {
         "main": {
-            url: "app/incomes/incomes.html",
-            uiString: "Incomes"
-        },
-        "incomes": {
             url: "app/main/main.html",
             uiString: "Main page"
+        },
+        "incomes": {
+            url: "app/incomes/incomes.html",
+            uiString: "Incomes"
         }
-    }
+    };
 
     buildBreadcrumb = function (elementsArr) {
         breadcrumbArr= [];
+        var a = 0;
         for (var index = 0; index < elementsArr.length; index++) {
-            breadcrumbArr[index] = (data[elementsArr[index]]);     
+            breadcrumbArr[index] = (data[elementsArr[index]]);
+            
         }
+
         return breadcrumbArr;
     }
 
